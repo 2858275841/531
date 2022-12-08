@@ -1,0 +1,212 @@
+<!-- 
+    time: 2022.12.05
+    time: 2022.12.07
+    Name: Rem 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/2.css">
+    <link rel="stylesheet" href="./css/2_2.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav_left">
+            <img src="./image/微信图片_20221206222745.png" alt="">
+        </div>
+        <div class="nav_main">
+            <ul>
+                <li style="margin-left: 0;" class="special">
+                    <a href="JavaScript:;" class="nav_main_a">首页</a>
+                </li>
+                <li>
+                    <a href="JavaScript:;" class="nav_main_a">空间</a>
+                </li>
+                <li>
+                    <a href="./Photowall.html" class="nav_main_a">照片墙</a>
+                </li>
+                <li>
+                    <a href="JavaScript:;" class="nav_main_a">留言</a>
+                </li>
+                <li>
+                    <a href="JavaScript:;" class="nav_main_a">关于我</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sousuo">
+            <div class="sousuo_main">
+                <input type="text" value="请输入搜素内容">
+                <img src="./image/sousuo.png" alt="">
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="nav_right_main">
+                <img src="./image/30.jpg" alt="" id="user_img">
+                <div class="user_Name">
+                    <p><a href="JavaScript:;">下雪啦</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="liuYan" style="display: none;">
+        <div class="liuYan_top">
+            <div class="liuYan_top_top">
+                <img src="./image/用户.png" alt="">
+                <span>匿名用户</span>
+            </div>
+            <div class="liuYan_top_main">
+                <textarea name="" id="textarea_id" cols="120" rows="10">请输入你要发布的内容</textarea>
+            </div>
+            <div class="liuYan_top_button">
+                <button>点击发表</button>
+            </div>
+        </div>
+        <div class="liuYan_button">
+            <div class="liuYan_button_main_3">
+                <ul>
+                    <!-- <li>
+                        <img src="./image/30.jpg" alt="" class="zheng_img">
+                    </li>
+                    <p class="zheng_p">
+                        <span class="span1">下雪啦</span>
+                        <span class="timeR">19:00</span>
+                        <br>
+                        <span class="span2">我是沙发</span>
+                    </p> -->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/1.js"></script>
+<script>
+    //发布
+    var btn = document.querySelector('button');
+    var liuYan_button_main_3 = document.querySelector('.liuYan_button_main_3');
+    var ul = liuYan_button_main_3.children;
+    // console.log(ul);
+
+
+    btn.addEventListener('click', function() {
+        // Dom_None();
+        reverseOrder();
+
+    })
+
+    // 封装评论区样式，留言 倒序序排列
+    var reverseOrder = function() {
+        //获取节点元素
+        var lis = document.createElement('li');
+        var img = document.createElement("img");
+        var p = document.createElement('p');
+        var span = document.createElement("span");
+        var span2 = document.createElement("span");
+        var br = document.createElement('br');
+        var span3 = document.createElement("span");
+
+        var p = document.createElement('p');
+
+        // var lisS = ul[0].appendChild(lis);
+        var lisS = ul[0].insertBefore(lis, ul[0].children[0]);
+        var imgs = lisS.appendChild(img);
+        imgs.src = "./image/30.jpg";
+        var p = lisS.appendChild(p);
+
+        var span1_1 = p.appendChild(span);
+        span1_1.innerHTML = '下雪啦';
+        span1_1.className = 'span1';
+        var span2_1 = p.appendChild(span2);
+        span2_1.className = 'timeR';
+
+        // 调用时间函数
+        span2_1.innerHTML = time();
+
+        var br1 = p.appendChild(br);
+
+        var span3_1 = p.appendChild(span3);
+        span3_1.className = 'span2';
+
+        span3_1.innerHTML = textarea.value;
+
+        //发布后清除内容
+        textarea.value = '';
+    }
+
+    // 封装评论区样式，留言 正序排列
+    var Dom_None = function() {
+        //获取节点元素
+        var lis = document.createElement('li');
+        var img = document.createElement("img");
+        var p = document.createElement('p');
+        var span = document.createElement("span");
+        var span2 = document.createElement("span");
+        var br = document.createElement('br');
+        var span3 = document.createElement("span");
+
+        var p = document.createElement('p');
+
+        var lisS = ul[0].appendChild(lis);
+        // var lisS = ul[0].insertBefore(lis, ul[0].children[0]);
+        var imgs = lisS.appendChild(img);
+        imgs.className = 'zheng_img';
+        imgs.src = "./image/30.jpg";
+
+        var p = ul[0].appendChild(p);
+        p.className = "zheng_p";
+        var span1_1 = p.appendChild(span);
+        span1_1.innerHTML = '下雪啦';
+        span1_1.className = 'span1';
+        var span2_1 = p.appendChild(span2);
+        span2_1.className = 'timeR';
+        // span2_1.innerHTML = data.getHours() + ':' + data.getMinutes();
+
+        // 调用时间函数
+        span2_1.innerHTML = time();
+
+        var br1 = p.appendChild(br);
+
+        var span3_1 = p.appendChild(span3);
+        span3_1.className = 'span2';
+
+        span3_1.innerHTML = textarea.value;
+
+        //发布后清除内容
+        textarea.value = '';
+    }
+
+    //封装时间函数
+    var time = function() {
+        var data = new Date();
+        var h = data.getHours();
+        h = h < 10 ? '0' + h : h;
+        var m = data.getMinutes();
+        m = m < 10 ? '0' + m : m;
+        var timeS = ('' + h + ':' + m);
+        return timeS;
+    }
+
+    // 监听键盘事件
+    window.document.onkeydown = disableRefresh;
+
+    // 封装回车键
+    function disableRefresh(evt) {
+        evt = (evt) ? evt : window.event;
+        if (evt.keyCode) {
+            if (evt.keyCode == 13) {
+                reverseOrder();
+            }
+        }
+    }
+</script>
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<!-- 2022.10.30，完成照片墙制作 -->
+<!DOCTYPE >
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>照片墙</title>
+
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+    <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <style>
+        /* 公共样式 */
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        /* 背景图，居中，不重复铺垫 */
+        
+        .main .main_left,
+        .main .main_right {
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        /* 单一样式 */
+        
+        body {
+            background-image: url(./image/微信图片_20221030094738.jpg);
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        
+        .main {
+            min-width: 1850px;
+            margin: 70px auto;
+            width: 100%;
+            height: 650px;
+            /* background-color: pink; */
+        }
+        /* 相册 */
+        
+        .main .main_left {
+            width: 50%;
+            height: 650px;
+            /* background-color: burlywood; */
+            float: left;
+            background-image: url(./image/微信图片_20221030125941.png);
+        }
+        
+        .main_left_top .img_xhh {
+            width: 200px;
+            height: 255px;
+            /* background-color: blue; */
+            float: left;
+            margin-top: 105px;
+            margin-left: 25px;
+        }
+        
+        .img_xhh img,
+        .img_yz img {
+            width: 200px;
+        }
+        
+        .img_xhh .name_xhh,
+        .img_yz .name_yz {
+            position: relative;
+            left: 72px;
+        }
+        
+        .main_left_bottom .img_yz {
+            width: 200px;
+            height: 255px;
+            /* background-color: brown; */
+            float: left;
+            /* margin-top: 105px; */
+            margin-left: 25px;
+        }
+        /* 木架 */
+        
+        .main .main_right {
+            width: 50%;
+            /* width: 550px; */
+            height: 650px;
+            /* background-color: coral; */
+            float: left;
+            /* background-image: url(./image/微信图片_20221030175130.png); */
+        }
+    </style>
+</head>
+<div class="main">
+    <div class="main_left">
+        <div class="main_left_top">
+            <div class="img_xhh">
+                <img src="./image/xhh.png" alt="">
+                <span class="name_xhh">肖湖辉</span>
+            </div>
+            <div class="img_xhh">
+                <img src="./image/zzp.png" alt="">
+                <span class="name_xhh">张紫平</span>
+            </div>
+            <div class="img_xhh">
+                <img src="./image/wjm.png" alt="">
+                <span class="name_xhh">王金明</span>
+            </div>
+            <div class="img_xhh">
+                <img src="./image/hqy.png" alt="">
+                <span class="name_xhh">何钦仪</span>
+            </div>
+        </div>
+        <div class="main_left_bottom">
+            <div class="img_yz">
+                <img src="./image//yz.png" alt="">
+                <span class="name_yz">&nbsp&nbsp游泽</span>
+            </div>
+            <div class="img_yz">
+                <img src="./image/lhl.png" alt="">
+                <span class="name_yz">刘洪亮</span>
+            </div>
+            <div class="img_yz">
+                <img src="./image/cl.png" alt="">
+                <span class="name_yz">&nbsp&nbsp蔡灵</span>
+            </div>
+            <div class="img_yz">
+                <img src="./image/微信图片_20221030125821.png" alt="">
+                <span class="name_yz"></span>
+            </div>
+        </div>
+    </div>
+    <div class="main_right">
+        <img src="./image/微信图片_20221208204023.png" alt="">
+    </div>
+</div>
+
+<body>
+</body>
+<script>
+    //取消选中并且取消右键操作
+    document.body.onselectstart =
+        document.body.oncontextmenu =
+        function() {
+            return false; //取消浏览器默认操作
+        };
+    document.oncontextmenu = function() {
+        return false;
+    };
+    document.onselectstart = function() {
+        return false;
+    };
+    document.oncontextmenu = function() {
+        return false;
+    };
+    //在本网页的任何键盘敲击事件都是无效操作 （防止F12和shift+ctrl+i调起开发者工具）  
+    window.onkeydown = window.onkeyup = window.onkeypress = function() {
+            return false;
+        }
+        //禁用开发者工具F12
+    document.onkeydown = function() {
+        if (window.event && window.event.keyCode == 123) {
+            return false;
+        }
+    };
+</script>
+<script src="./js/special efficiency.js"></script>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/2.css">
+</head>
+<style>
+    .nav .nav_right {
+        float: right;
+        width: 300px;
+        height: 70px;
+        /* background-color: pink; */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .nav .nav_right_main {
+        margin: 15px auto;
+        width: 200px;
+        height: 40px;
+        /* background-color: brown; */
+    }
+    
+    .nav .nav_right .login,
+    .nav .nav_right .enroll {
+        width: 70px;
+        height: 40px;
+        background-color: royalblue;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        text-align: center;
+    }
+    
+    .nav .nav_right .enroll {
+        margin-left: 6px;
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="nav_left">
+            <img src="./image/微信图片_20221206222745.png" alt="">
+        </div>
+        <div class="nav_main">
+            <ul>
+                <li style="margin-left: 0;">
+                    <a href="" onclick="cc()">首页</a>
+                </li>
+                <li>
+                    <a href="" onclick="cc()">空间</a>
+                </li>
+                <li>
+                    <a href="" onclick="cc()">照片墙</a>
+                </li>
+                <li>
+                    <a href="" onclick="cc()">留言</a>
+                </li>
+                <li>
+                    <a href="" onclick="cc()">关于我</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sousuo">
+            <div class="sousuo_main">
+                <input type="text" value="请输入搜素内容">
+                <img src="./image/sousuo.png" alt="">
+            </div>
+        </div>
+        <div class="nav_right">
+            <div class="nav_right_main">
+                <button class="login">登录</button>
+                <button class="enroll">注册</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var ipt = document.querySelector("input");
+    ipt.addEventListener('focus', function() {
+        this.value = '';
+    })
+    ipt.addEventListener('blur', function() {
+        this.value = "请输入搜素内容";
+    })
+
+    //登录跳转
+    var login = document.querySelector('button');
+    var enroll = document.querySelector('button');
+    login.addEventListener('click', function() {
+        window.location.href = "./login.html";
+    })
+
+    var cc = function() {
+        alert("请先登录再进行操作");
+    }
+</script>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片墙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            background: url(./image/微信图片_20221208212129.jpg) top;
+            position: relative;
+        }
+        
+        .div_main {
+            width: 900px;
+            height: 700px;
+            /* background-color: pink; */
+            margin: auto;
+            margin-top: 30px;
+            position: relative;
+        }
+        
+        .div_main .img_zxj {
+            width: 400px;
+            position: absolute;
+            left: 250px;
+            top: 180px;
+            /* margin: auto; */
+        }
+        
+        .div_main .img_hqy,
+        .img_zjp,
+        .img_yz,
+        .img_xhh,
+        .img_lhl,
+        .img_wjm,
+        .img_cl,
+        .img_lxt {
+            /* position: absolute; */
+            width: 180px;
+        }
+        
+        .img_yz {
+            position: absolute;
+            right: 0;
+        }
+        
+        .img_cl {
+            position: absolute;
+            /* left: 20px; */
+            right: 0;
+            bottom: 0;
+            /* border-left: 40px; */
+        }
+        
+        .img_wjm {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        
+        .img_xhh {
+            position: absolute;
+            width: 215px;
+            left: -15px;
+            top: 233px;
+        }
+        
+        .img_lhl {
+            position: absolute;
+            right: 0;
+            top: 255px;
+        }
+        
+        .img_zjp {
+            position: absolute;
+            left: 350px;
+        }
+        
+        .img_lxt {
+            position: absolute;
+            left: 350px;
+            bottom: 0;
+        }
+        /* 17寸屏幕样式 */
+        
+        @media (min-width: 1800px) and (orientation: landscape) {
+            body {
+                background: url(./image/微信图片_20221208222626.jpg) top;
+            }
+            .div_main {
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div_main">
+        <img src="./image/微信图片_20221208204023.png" alt="" class="img_zxj">
+        <img src="./image/hqy.png" alt="" class="img_hqy">
+        <img src="./image/zzp.png" alt="" class="img_zjp">
+        <img src="./image/yz.png" alt="" class="img_yz">
+        <img src="./image/xhh.png" alt="" class="img_xhh">
+        <img src="./image/lhl.png" alt="" class="img_lhl">
+        <img src="./image/wjm.png" alt="" class="img_wjm">
+        <img src="./image/hqy.png" alt="" class="img_lxt">
+        <img src="./image/cl.png" alt="" class="img_cl">
+    </div>
+
+    <!-- <div class="div_img_main">
+        <img src="./image/微信图片_20221208204023.png" alt="">
+    </div> -->
+
+</body>
+
+</html>

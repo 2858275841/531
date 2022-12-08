@@ -1,0 +1,122 @@
+<!-- 2022.10.31，完成首页制作！ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>活宝回忆录</title>
+
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+    <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        body {
+            width: 1865px;
+            height: 944px;
+            /* background-color: pink; */
+            background-image: url(./image/微信图片_20221031210529.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .nav {
+            width: 100%px;
+            height: 150px;
+            /* background-color: crimson; */
+            background-image: url(./image/微信图片_20221031215417.png);
+        }
+        
+        .nav_left {
+            float: left;
+            text-align: center;
+            width: 400px;
+            height: 150px;
+            /* background-color: blue; */
+        }
+        
+        .nav_left img {
+            width: 200px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .nav_left .span1,
+        .nav_right .span1 {
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .nav_main {
+            float: left;
+            width: 400px;
+            height: 150px;
+            /* background-color: chocolate; */
+        }
+        
+        .nav_right {
+            width: 1065px;
+            height: 150px;
+            /* background-color: coral; */
+            float: left;
+            text-align: center;
+        }
+        
+        .nav_right img {
+            padding-left: 50px;
+            width: 282px;
+            vertical-align: middle;
+        }
+        
+        .nav_right .img_left {
+            padding-left: 0px;
+        }
+        /* 主体 */
+        
+        .main {
+            margin-top: 115px;
+            width: 100%px;
+            height: 666px;
+            overflow: hidden;
+            /* background-color: pink; */
+        }
+        
+        .main .main_left {
+            margin-left: 190px;
+            width: 1000px;
+            height: 666px;
+            /* background-color: coral; */
+        }
+    </style>
+</head>
+<div class="nav">
+    <div class="nav_left">
+        <img src="./image/微信图片_20221031213216.png" alt=""><span class="span1"></span>
+    </div>
+    <div class="nav_main">
+
+    </div>
+    <div class="nav_right">
+        <a href="./Photowall.html" onclick="alert('你干嘛哎呦~')"><img src="./image/微信图片_20221031213022.png" alt="" class="img_left"><span class="span1"></span></a>
+        <a href="" onclick="alert('别催了，再写了')"><img src="./image/微信图片_20221031213012.png" alt=""><span class="span1"></span></a>
+        <a href="" onclick="alert('你干嘛哎呦~ \n点我干嘛 没写！')"><img src="./image/微信图片_20221031214329.png" alt=""><span class="span1"></span></a>
+    </div>
+</div>
+<div class="main">
+    <div class="main_left">
+        <img src="./image/微信图片_20221031221823.png" alt="">
+    </div>
+</div>
+</body>
+
+</html>

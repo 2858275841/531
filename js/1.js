@@ -1,4 +1,3 @@
-window.addEventListener('load', function() {
     var ipt = document.querySelector("input");
     ipt.addEventListener('focus', function() {
         this.value = '';
@@ -52,4 +51,3 @@ window.addEventListener('load', function() {
     textarea.addEventListener('blur', function() {
         this.innerHTML = "请输入你要发布的内容";
     })
-});

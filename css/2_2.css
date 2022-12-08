@@ -1,0 +1,190 @@
+.nav .nav_right {
+    float: right;
+    width: 300px;
+    height: 70px;
+    /* background-color: pink; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* display: flex; */
+}
+
+.nav .nav_right_main {
+    width: 250px;
+    height: 70px;
+    /* background-color: coral; */
+    display: flex;
+}
+
+.nav_right_main img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: center;
+    position: relative;
+    /* margin: 0 auto; */
+}
+
+.nav_right_main .user_Name {
+    position: absolute;
+    top: 62px;
+    left: -72px;
+    width: 200px;
+    height: 260px;
+    /* background-color: #fff; */
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    border-radius: 10px;
+}
+
+.nav_right_main .user_Name p {
+    margin: 10px auto;
+    /* display: block; */
+    text-align: center;
+}
+
+.nav_right_main .user_Name p a {
+    font-weight: 800;
+    font-size: 20px;
+    color: rgb(251, 114, 153);
+    /* border: 10px; */
+    /* color: red; */
+}
+
+
+/* 留言区样式 */
+
+.special {
+    border-bottom: 3px solid yellow;
+}
+
+.special2 {
+    border-bottom: none;
+}
+
+.liuYan {
+    width: 900px;
+    height: 660px;
+    /* background: pink; */
+    margin: auto;
+}
+
+.liuYan_top {
+    margin-top: 20px;
+    width: 900px;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* background-color: pink; */
+}
+
+.liuYan_top_top {
+    width: 200px;
+    height: 70px;
+    /* background-color: darkgoldenrod; */
+    display: flex;
+}
+
+.liuYan_top_top img {
+    float: left;
+    padding: 10px;
+    width: 50px;
+}
+
+.liuYan_top_top span {
+    align-self: center;
+}
+
+.liuYan_top_main textarea {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.liuYan_top_button button {
+    width: 100px;
+    height: 40px;
+    background-color: royalblue;
+    float: right;
+    margin-right: 10px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.liuYan_button {
+    margin-top: 20px;
+    width: 900px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.liuYan_button_main_3 {
+    width: 800px;
+    height: 300px;
+    /* background-color: pink; */
+    margin: auto;
+    position: relative;
+    top: 20px;
+    /* display: flex; */
+}
+
+.liuYan_button_main_3 ul li {
+    border-bottom: 2px dashed #ccc;
+}
+
+
+/* 倒序 */
+
+.liuYan_button_main_3 img {
+    position: relative;
+    top: 6px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.zheng_img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.zheng_p {
+    height: 70px;
+    /* background-color: coral; */
+}
+
+
+/* 倒序 */
+
+.liuYan_button_main_3 ul p {
+    display: inline-block;
+    /* width: 800px; */
+    height: 70px;
+    /* background-color: coral; */
+}
+
+.liuYan_button_main_3 ul p span {
+    padding-left: 10px;
+    /* padding-top: 10px; */
+    /* line-height: 70px; */
+}
+
+.span1 {
+    color: chocolate;
+    font-size: 15px;
+}
+
+.timeR {
+    color: #999;
+}
+
+.span2 {
+    display: inline-block;
+    /* color: #ccc; */
+    padding-top: 5px;
+    /* margin: 10px; */
+}

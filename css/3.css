@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url(../image/微信图片_20221208212129.jpg) top;
+    position: relative;
+}
+
+.div_main {
+    width: 900px;
+    height: 700px;
+    /* background-color: pink; */
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.div_main .img_zxj {
+    width: 400px;
+    position: absolute;
+    left: 250px;
+    top: 180px;
+    /* margin: auto; */
+}
+
+.div_main .img_hqy,
+.img_zjp,
+.img_yz,
+.img_xhh,
+.img_lhl,
+.img_wjm,
+.img_cl,
+.img_lxt {
+    /* position: absolute; */
+    width: 180px;
+}
+
+.img_yz {
+    position: absolute;
+    right: 0;
+}
+
+.img_cl {
+    position: absolute;
+    /* left: 20px; */
+    right: 0;
+    bottom: 0;
+    /* border-left: 40px; */
+}
+
+.img_wjm {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.img_xhh {
+    position: absolute;
+    width: 215px;
+    left: -15px;
+    top: 233px;
+}
+
+.img_lhl {
+    position: absolute;
+    right: 0;
+    top: 255px;
+}
+
+.img_zjp {
+    position: absolute;
+    left: 350px;
+}
+
+.img_lxt {
+    position: absolute;
+    left: 350px;
+    bottom: 0;
+}
+
+
+/* 17寸屏幕样式 */
+
+@media (min-width: 1800px) and (orientation: landscape) {
+    body {
+        background: url(../image/微信图片_20221208222626.jpg) top;
+    }
+    .div_main {
+        margin-top: 100px;
+    }
+}

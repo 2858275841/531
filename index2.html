@@ -1,7 +1,7 @@
 <!-- 
     time: 2022.12.05
     time: 2022.12.07
-    Name: Rem 
+    By: Rem 
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +13,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/2.css">
     <link rel="stylesheet" href="./css/2_2.css">
-    
+
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
     <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
 </head>
 
 <body>
@@ -102,6 +103,13 @@
         reverseOrder();
 
     })
+    var omWidth = window.innerWidth;
+    var omHeight = window.innerHeight;
+    // console.log(omWidth);
+    var textarea_id = document.getElementById('textarea_id');
+    if (omWidth >= 800 && omHeight <= 400) {
+        textarea_id.cols = '93';
+    }
 
     // 封装评论区样式，留言 倒序序排列
     var reverseOrder = function() {

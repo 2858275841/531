@@ -1,3 +1,5 @@
+/* 导航栏 右边 */
+
 .nav .nav_right {
     float: right;
     width: 300px;
@@ -187,4 +189,17 @@
     /* color: #ccc; */
     padding-top: 5px;
     /* margin: 10px; */
+}
+
+@media only screen and (max-width: 850px) {
+    .nav .nav_right {
+        display: flex;
+        width: 110px;
+    }
+    .liuYan,
+    .liuYan_top,
+    .liuYan_button,
+    .liuYan_button_main_3 {
+        width: 700px;
+    }
 }

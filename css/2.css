@@ -44,7 +44,7 @@ body {
 .nav .nav_main {
     width: 500px;
     height: 70px;
-    /* background-color: pink; */
+    /* background-color: burlywood; */
     margin: auto;
     position: relative;
     right: 140px;
@@ -69,7 +69,7 @@ body {
 .nav .sousuo {
     width: 200px;
     height: 70px;
-    /* background-color: pink; */
+    /* background-color: brown; */
     position: absolute;
     right: 450px;
     top: 0;
@@ -143,3 +143,21 @@ body {
     margin-left: 6px;
     background-color: orange;
 }  */
+
+@media only screen and (max-width: 850px) {
+    .nav .nav_main {
+        width: 310px;
+        /* position: relative; */
+        /* left: 10px; */
+    }
+    .nav .nav_main ul li {
+        width: 50px;
+        margin-left: 15px;
+    }
+    .nav .sousuo {
+        right: 155px;
+    }
+    .nav_left img {
+        margin-left: 5px;
+    }
+}

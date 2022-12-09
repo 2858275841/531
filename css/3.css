@@ -82,6 +82,21 @@ body {
     bottom: 0;
 }
 
+@media only screen and (max-width: 850px) {
+    .div_main {
+        width: 700px;
+    }
+    .div_main .img_zxj {
+        width: 300px;
+        left: 200px;
+        top: 240px;
+    }
+    .img_zjp,
+    .img_lxt {
+        left: 250px;
+    }
+}
+
 
 /* 17寸屏幕样式 */
 

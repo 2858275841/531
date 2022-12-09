@@ -145,6 +145,10 @@ body {
 }  */
 
 @media only screen and (max-width: 850px) {
+    body {
+        height: 1000px;
+        /* background: repeat; */
+    }
     .nav .nav_main {
         width: 310px;
         /* position: relative; */

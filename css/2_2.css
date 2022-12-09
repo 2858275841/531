@@ -73,7 +73,7 @@
 
 .liuYan_top {
     margin-top: 20px;
-    width: 900px;
+    /* width: 900px; */
     height: 330px;
     background-color: rgba(255, 255, 255, 0.7);
     /* background-color: pink; */
@@ -115,13 +115,13 @@
 
 .liuYan_button {
     margin-top: 20px;
-    width: 900px;
+    /* width: 900px; */
     height: 320px;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
 .liuYan_button_main_3 {
-    width: 800px;
+    /* width: 800px; */
     height: 300px;
     /* background-color: pink; */
     margin: auto;

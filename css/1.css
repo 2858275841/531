@@ -85,12 +85,24 @@
         width: 33px;
     }
     
+    .p_usName {
+        position: absolute;
+        left: 65px;
+        /* display: inline-block; */
+        margin-top: 15px;
+        color: #666;
+    }
+    
+    .p_usName span {
+        font-size: 15px;
+    }
+    
     #submit {
         width: 100px;
         height: 40px;
         line-height: 40px;
         margin-left: 100px;
-        margin-top: 40px;
+        margin-top: 55px;
         background-color: #EBF7F3;
         color: #7BB6B6;
         border-radius: 5px;

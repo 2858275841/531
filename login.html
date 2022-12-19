@@ -8,8 +8,8 @@
 
     <link rel="stylesheet" href="./css/1.css">
 
-     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
-     <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <!-- <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"> -->
+    <!-- <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
 
     <style>
         body {
@@ -45,6 +45,10 @@
                     <input type="text" id="username" placeholder="用户名" name="uname"><br>
                     <img src="./image/密码.png" alt="">
                     <input type="password" id="password" placeholder="密码">
+                    <p class="p_usName">
+                        <input type="checkbox" name="" id="checkbox">
+                        <span>记住用户名</span>
+                    </p>
                     <input type="submit" value="登录" id="submit" onclick="login()">
                 </form>
 
@@ -65,16 +69,31 @@
 </body>
 <script>
     var submit = document.querySelector("#submit");
-    // console.log(submit);
-    // submit.disabled = true;
+    var username = document.querySelector("#username");
+    var password = document.querySelector("#password");
+    var checkbox = document.querySelector("#checkbox");
+
+    if (localStorage.getItem("username")) {
+        username.value = localStorage.getItem("username");
+        checkbox.checked = true;
+    }
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            localStorage.setItem('username', username.value);
+
+        } else {
+            localStorage.removeItem('username');
+        }
+    });
 
     function login() {
-        //获取input数据
-        var username = document.querySelector("#username").value;
-        var password = document.querySelector("#password").value;
-
-
-        if (username == "admin" && password == 123456) {
+        if (username.value == '') {
+            alert('用户名为空错误');
+            username.value = "#";
+        }
+        // 默认记住用户名
+        localStorage.setItem('username', username.value);
+        if (username.value == localStorage.getItem('username') && password.value == 123456) {
             // alert("用户名和密码输入正确，进入下一步验证");
             while (true) {
                 window.location.href = "./index2.html";
